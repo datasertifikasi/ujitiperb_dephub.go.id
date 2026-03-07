@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Cek Data</title>
+<style>
+
+body{
+font-family:Arial;
+background:#f2f2f2;
+text-align:center;
+}
+
+.card{
+background:white;
+width:350px;
+margin:120px auto;
+padding:30px;
+border-radius:10px;
+box-shadow:0 0 10px rgba(0,0,0,0.2);
+}
+
+.valid{
+color:green;
+font-weight:bold;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+<h2>CEK DATA</h2>
+
+<p>Nomor Data : <span id="id"></span></p>
+<p>Status : <span class="valid">VALID</span></p>
+
+</div>
+
+<script>
+
+let params = new URLSearchParams(window.location.search)
+let id = params.get("id")
+
+document.getElementById("id").innerText = id
+
+</script>
+
+</body>
+</html>
