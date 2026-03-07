@@ -1,52 +1,182 @@
 <!DOCTYPE html>
+
 <html>
 <head>
-<title>Cek Data</title>
+<meta charset="UTF-8">
+<title>Sistem Verifikasi Data</title>
+
 <style>
 
 body{
-font-family:Arial;
-background:#f2f2f2;
+font-family:Arial, sans-serif;
+background:#eef2f7;
+margin:0;
+}
+
+.header{
+background:#1b4f9c;
+color:white;
+padding:18px;
 text-align:center;
-}
-
-.card{
-background:white;
-width:350px;
-margin:120px auto;
-padding:30px;
-border-radius:10px;
-box-shadow:0 0 10px rgba(0,0,0,0.2);
-}
-
-.valid{
-color:green;
+font-size:20px;
 font-weight:bold;
 }
 
+.container{
+width:520px;
+margin:60px auto;
+background:white;
+border-radius:10px;
+box-shadow:0 5px 18px rgba(0,0,0,0.18);
+padding:35px;
+}
+
+.title{
+text-align:center;
+font-size:22px;
+margin-bottom:25px;
+font-weight:bold;
+}
+
+.inputBox{
+text-align:center;
+margin-bottom:20px;
+}
+
+input{
+padding:10px;
+width:65%;
+border:1px solid #ccc;
+border-radius:5px;
+font-size:16px;
+}
+
+button{
+padding:10px 18px;
+background:#1b4f9c;
+color:white;
+border:none;
+border-radius:5px;
+font-size:15px;
+cursor:pointer;
+}
+
+button:hover{
+background:#163f7a;
+}
+
+.result{
+margin-top:25px;
+display:none;
+}
+
+.table{
+width:100%;
+border-collapse:collapse;
+font-size:16px;
+}
+
+.table td{
+padding:12px;
+border-bottom:1px solid #eee;
+}
+
+.status{
+color:#11a63c;
+font-weight:bold;
+}
+
+.qr{
+text-align:center;
+margin-top:20px;
+}
+
+.footer{
+text-align:center;
+font-size:12px;
+color:#777;
+margin-top:25px;
+}
+
 </style>
+
 </head>
 
 <body>
 
-<div class="card">
+<div class="header">
+SISTEM VERIFIKASI DATA ONLINE
+</div>
 
-<h2>CEK DATA</h2>
+<div class="container">
 
-<p>Nomor Data : <span id="id"></span></p>
-<p>Status : <span class="valid">VALID</span></p>
+<div class="title">
+CEK DATA
+</div>
+
+<div class="inputBox">
+<input type="text" id="nomor" placeholder="Masukkan nomor data">
+<button onclick="cekData()">Cek</button>
+</div>
+
+<div class="result" id="hasil">
+
+<table class="table">
+
+<tr>
+<td>Nomor Data</td>
+<td id="id"></td>
+</tr>
+
+<tr>
+<td>Status Verifikasi</td>
+<td class="status">VALID</td>
+</tr>
+
+<tr>
+<td>Tanggal Verifikasi</td>
+<td id="date"></td>
+</tr>
+
+</table>
+
+<div class="qr">
+<img id="qr" width="120">
+</div>
+
+</div>
+
+<div class="footer">
+Halaman ini menampilkan hasil verifikasi data secara otomatis.
+</div>
 
 </div>
 
 <script>
 
-let params = new URLSearchParams(window.location.search)
-let id = params.get("id")
+function cekData(){
 
-document.getElementById("id").innerText = id
+let id = document.getElementById("nomor").value
+
+if(id == ""){
+alert("Masukkan nomor data")
+return
+}
+
+document.getElementById("hasil").style.display="block"
+
+document.getElementById("id").innerText=id
+
+let today = new Date().toLocaleDateString()
+
+document.getElementById("date").innerText=today
+
+document.getElementById("qr").src =
+"https://api.qrserver.com/v1/create-qr-code/?size=120x120&data="+id
+
+}
 
 </script>
 
 </body>
-
-</html> 
+</html>
