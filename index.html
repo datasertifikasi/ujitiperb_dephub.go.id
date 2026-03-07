@@ -4,7 +4,6 @@
 <head>
 <meta charset="UTF-8">
 <title>Sistem Verifikasi Data</title>
-
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
@@ -18,8 +17,8 @@ margin:0;
 .header{
 background:#1b4f9c;
 color:white;
-padding:15px;
 text-align:center;
+padding:15px;
 font-weight:bold;
 font-size:18px;
 }
@@ -28,9 +27,9 @@ font-size:18px;
 max-width:500px;
 margin:20px auto;
 background:white;
-border-radius:8px;
 padding:25px;
-box-shadow:0 3px 10px rgba(0,0,0,0.15);
+border-radius:8px;
+box-shadow:0 3px 12px rgba(0,0,0,0.15);
 }
 
 .title{
@@ -73,6 +72,11 @@ color:green;
 font-weight:bold;
 }
 
+.qr{
+text-align:center;
+margin-top:20px;
+}
+
 .pdfbtn{
 margin-top:15px;
 background:#28a745;
@@ -85,18 +89,18 @@ background:#28a745;
 <body>
 
 <div class="header">
-SISTEM VERIFIKASI DATA
+SISTEM VERIFIKASI DATA ONLINE
 </div>
 
 <div class="container">
 
 <div class="title">
-CEK DATA
+DATA SRUT
 </div>
 
 <input id="nomor" placeholder="Masukkan nomor data">
 
-<button onclick="cekData()">Cek Data</button>
+<button onclick="DATA KENDARAAN : ()">Cek Data</button>
 
 <div id="hasil"></div>
 
@@ -107,14 +111,21 @@ CEK DATA
 let database={
 
 "218417":{
-nama:"BUDI SANTOSO",
-kendaraan:"HONDA SCOOPY",
-status:"VALID"
-},
+NO. SRUT
+489911/VIII/SRUT-596/DJPD-SPD/02/2024
 
-"889122":{
-nama:"ANDI PRATAMA",
-kendaraan:"YAMAHA NMAX",
+NO.SK RANCANG BANGUN
+KP-DJPD 8358 TAHUN 2023
+
+MEREK
+HINO/XZU349R-HKFTBD3/(4X2) M/T
+
+nama:"BUDI SANTOSO",
+merk:"HONDA",
+tipe:"SCOOPY",
+tahun:"2023",
+rangka:"MH1JM1234PK123456",
+mesin:"JM12E3456789",
 status:"VALID"
 }
 
@@ -136,44 +147,37 @@ document.getElementById("hasil").innerHTML=`
 
 <table class="table">
 
-<tr>
-<td>Nomor Data</td>
-<td>${id}</td>
-</tr>
-
-<tr>
-<td>Nama Pemilik</td>
-<td>${data.nama}</td>
-</tr>
-
-<tr>
-<td>Tipe Kendaraan</td>
-<td>${data.kendaraan}</td>
-</tr>
-
-<tr>
-<td>Status</td>
-<td class="status">${data.status}</td>
-</tr>
+<tr><td>Nomor Data</td><td>${id}</td></tr>
+<tr><td>Nama Pemilik</td><td>${data.nama}</td></tr>
+<tr><td>Merk</td><td>${data.merk}</td></tr>
+<tr><td>Tipe Kendaraan</td><td>${data.tipe}</td></tr>
+<tr><td>Tahun</td><td>${data.tahun}</td></tr>
+<tr><td>Nomor Rangka</td><td>${data.rangka}</td></tr>
+<tr><td>Nomor Mesin</td><td>${data.mesin}</td></tr>
+<tr><td>Status</td><td class="status">${data.status}</td></tr>
 
 </table>
 
-<button class="pdfbtn" onclick="downloadPDF('${id}','${data.nama}','${data.kendaraan}')">
-Download Sertifikat PDF
+<div class="qr">
+<img src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=${id}">
+</div>
+
+<button class="pdfbtn" onclick="downloadPDF('${id}','${data.nama}','${data.tipe}')">
+Download Sertifikat
 </button>
 
 `
 
 }
 
-function downloadPDF(id,nama,kendaraan){
+function downloadPDF(id,nama,tipe){
 
 let isi=`
 SERTIFIKAT VERIFIKASI DATA
 
-Nomor Data : ${id}
-Nama Pemilik : ${nama}
-Kendaraan : ${kendaraan}
+Nomor : ${id}
+Nama : ${nama}
+Kendaraan : ${tipe}
 Status : VALID
 `
 
@@ -191,10 +195,8 @@ let params=new URLSearchParams(window.location.search)
 let id=params.get("id")
 
 if(id){
-
 document.getElementById("nomor").value=id
 cekData()
-
 }
 
 </script>
