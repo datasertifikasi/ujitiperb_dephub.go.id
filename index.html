@@ -630,43 +630,29 @@ font-size:16px;
 
 </table>
 
-<div class="qr">
-<img src="https://api.qrserver.com/v1/create-qr-code/?size=140x140&data=SRUT589911">
-</div>
+<a href="index.html" class="home-btn">
+🏠 Home
+</a>
 
-<button onclick="downloadPDF()">Download Sertifikat</button>
+<style>
 
-</div>
-
-<script>
-
-function downloadPDF(){
-
-let isi=`
-SERTIFIKAT VERIFIKASI DATA
-
-No SRUT : 589911/VIII/SRUT-598/DJPD-SPD/02/2026
-Nomor Rangka : MJEFL8YWLCJM14912
-Nomor Mesin : J08EUFJ50308
-Merek : HINO
-Jenis Kendaraan : DUMP TRUCK
-Status : VALID
-`
-
-let blob=new Blob([isi],{type:"text/plain"})
-let link=document.createElement("a")
-
-link.href=URL.createObjectURL(blob)
-link.download="sertifikat_SRUT.txt"
-
-link.click()
-
+.home-btn{
+display:inline-block;
+background:#1aa7b8;
+color:white;
+padding:14px 28px;
+font-size:20px;
+border-radius:8px;
+text-decoration:none;
+font-weight:500;
 }
 
-</script>
+.home-btn:hover{
+background:#1596a5;
+}
 
-</body>
-</html>
+</style>
+
 
 
 
