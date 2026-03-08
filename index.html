@@ -1,7 +1,10 @@
+<!DOCTYPE html>
+
+<html>
 <head>
 
 <meta charset="UTF-8">
-<title>Sistem Sertifikasi Registrasi Uji Tipe | Kementerian Perhubunugan</title>
+<title>Sistem Sertifikasi Registrasi Uji Tipe | Kementerian Perhubungan</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 
@@ -12,53 +15,7 @@ font-family:'Poppins', sans-serif;
 margin:0;
 }
 
-.top-header{
-background:#00bcd4;
-padding:18px 30px;
-}
-
-.logo-area{
-display:flex;
-align-items:center;
-gap:20px;
-}
-
-.logo{
-width:70px;
-background:white;
-padding:0px;
-border-radius:0px;
-}
-
-.title-main{
-color:white;
-font-size:26px;
-font-weight:bold;
-}
-
-.title-sub{
-color:white;
-font-size:16px;
-}
-
-</style>
-
-</head>
-<div class="top-header">
-
-<div class="logo-area">
-<img src="logo.png" class="logo">
-
-<div class="title-text">
-<div class="title-main">SISTEM INFORMASI</div>
-<div class="title-sub">SERTIFIKASI REGISTRASI UJI TIPE</div>
-</div>
-
-</div>
-
-</div>
-
-<style>
+/* HEADER */
 
 .top-header{
 background:#00bcd4;
@@ -74,38 +31,20 @@ gap:20px;
 .logo{
 width:70px;
 background:white;
-padding:0px;
-border-radius:0px;
 }
 
 .title-main{
 color:white;
 font-size:26px;
 font-weight:bold;
-letter-spacing:1px;
 }
 
 .title-sub{
 color:white;
 font-size:16px;
-margin-top:3px;
 }
 
-</style>
-
-<div class="top-line"></div>
-
-<div class="srut-header">
-<h1>DATA SRUT</h1>
-
-<div class="divider">
-<span></span>
-</div>
-</div>
-
-<div class="section-line"></div>
-
-<style>
+/* TITLE */
 
 .top-line{
 height:6px;
@@ -120,16 +59,14 @@ padding:40px 0 20px 0;
 .srut-header h1{
 font-size:42px;
 font-weight:bold;
-color:#222;
 margin:0;
-letter-spacing:2px;
 }
 
 .divider{
 width:90px;
 height:2px;
 background:#ddd;
-margin:20px auto 0 auto;
+margin:20px auto;
 position:relative;
 }
 
@@ -141,7 +78,6 @@ top:-2px;
 width:60px;
 height:4px;
 background:#2ecc71;
-border-radius:2px;
 }
 
 .section-line{
@@ -150,106 +86,15 @@ background:#e0e0e0;
 margin:30px 0;
 }
 
+/* CONTAINER */
+
 .container{
 max-width:1100px;
-margin:0 auto;
-padding-left:70px;
-padding-right:70px;
+margin:auto;
+padding:0 70px;
 }
 
-</style>
-
-
-<div class="container">
-
-<div class="section-title">DATA KENDARAAN :</div>
-<table class="table2">
-
-<tr>
-<td>
-<div class="label">NO. SRUT</div>
-<div class="value">589911/VIII/SRUT-598/DJPD-SPD/02/2026</div>
-</td>
-
-<td>
-<div class="label"></div>
-<div class="value"></div>
-</td>
-</tr>
-  
-<tr>
-<td>
-<div class="label">NO SK RANCANG BANGUN</div>
-<div class="value">KP-DJPD 8358 TAHUN 2026</div>
-</td>
-
-<td>
-<div class="label">TANGGAL SK RANCANG BANGUN</div>
-<div class="value">07 - 02 - 2026</div>
-</td>
-</tr>
-
-<tr>
-<td>
-<div class="label">NOMOR MESIN</div>
-<div class="value">J08EUFJ50308</div>
-</td>
-
-<td>
-<div class="label">NOMOR RANGKA</div>
-<div class="value">MJEFL8YWLCJM14912</div>
-</td>
-</tr> 
-
-<tr>
-<td>
-<div class="label">JENIS KENDARAAN</div>
-<div class="value">BAK TERBUKA (DUMP TRUCK)</div>
-</td>
-
-<td>
-<div class="label">MEREK</div>
-<div class="value">HINO / FL8JTLA-MGJW (FL260JW) (6X2)</div>
-</td>
-</tr>
-
-<tr>
-<td>
-<div class="label">WARNA</div>
-<div class="value">HIJAU SILVER</div>
-</td>
-
-<td>
-<div class="label">LAMPIRAN</div>
-<a class="lampiran-btn" href="lampiran.pdf" target="_blank">
-LIHAT LAMPIRAN KENDARAAN</a>
-
-<style>
-
-.lampiran-btn{
-display:inline-block;
-background:#28a745;
-color:white;
-padding:10px 18px;
-border-radius:4px;
-font-size:14px;
-font-weight:600;
-text-decoration:none;
-transition:0.2s;
-}
-
-.lampiran-btn:hover{
-background:#218838;
-}
-
-</style>
-
-</td>
-</tr>
-
-</table>
-
-<style>
+/* TABLE */
 
 .table2{
 width:100%;
@@ -277,191 +122,6 @@ color:#2e8b57;
 font-size:15px;
 }
 
-</style>
-
-</table>
-
-<div class="section-title">1. DIMENSI KENDARAAN :</div>
-<table class="table2">
-
-<tr>
-<td>
-<div class="label">PANJANG TOTAL</div>
-<div class="value">589911/VIII/SRUT-598/DJPD-SPD/02/2026</div>
-</td>
-
-<td>
-<div class="label">LEBAR TOTAL</div>
-<div class="value">07 - 02 - 2026</div>
-</td>
-</tr>
-
-<tr>
-<td>
-<div class="label">TINGGI TOTAL</div>
-<div class="value">589911/VIII/SRUT-598/DJPD-SPD/02/2026</div>
-</td>
-
-<td>
-<div class="label">JARAK SUMBU 1 - 2</div>
-<div class="value">07 - 02 - 2026</div>
-</td>
-</tr>
-
-<tr>
-<td>
-<div class="label">REAR OVERHANG (ROH)</div>
-<div class="value">589911/VIII/SRUT-598/DJPD-SPD/02/2026</div>
-</td>
-
-<td>
-<div class="label">JARAK SUMBU 2 - 3</div>
-<div class="value">07 - 02 - 2026</div>
-</td>
-</tr>
-
-<tr>
-<td>
-<div class="label">FRONT OVERHEANG (FOH)</div>
-<div class="value">589911/VIII/SRUT-598/DJPD-SPD/02/2026</div>
-</td>
-
-<td>
-<div class="label">JARAK SUMBU 3 - 4</div>
-<div class="value">07 - 02 - 2026</div>
-</td>
-</tr>
-
-<table class="table">
-
-<div class="section-title">2. KAROSERI KENDARAAN :</div>
-<table class="table2">
-
-<tr>
-<td>
-<div class="label">JUMLAH SILINDER</div>
-<div class="value">589911/VIII/SRUT-598/DJPD-SPD/02/2026</div>
-</td>
-
-<td>
-<div class="label">ISI SILINDERL</div>
-<div class="value">07 - 02 - 2026</div>
-</td>
-</tr>
-
-<tr>
-<td>
-<div class="label">PANJANG BOX/BAK/TANGKI</div>
-<div class="value">589911/VIII/SRUT-598/DJPD-SPD/02/2026</div>
-</td>
-
-<td>
-<div class="label">DAYA MOTOR</div>
-<div class="value">07 - 02 - 2026</div>
-</td>
-</tr>
-
-<tr>
-<td>
-<div class="label">LEBAR BOX/BAK/TANGKI</div>
-<div class="value">589911/VIII/SRUT-598/DJPD-SPD/02/2026</div>
-</td>
-
-<td>
-<div class="label">JUMLAH TEMPAT DUDUK</div>
-<div class="value">07 - 02 - 2026</div>
-</td>
-</tr>
-
-<tr>
-<td>
-<div class="label">TINGGI BOX/BAK/TANGKI</div>
-<div class="value">589911/VIII/SRUT-598/DJPD-SPD/02/2026</div>
-</td>
-
-<td>
-<div class="label">RUMAH BADAN</div>
-<div class="value">07 - 02 - 2026</div>
-</td>
-</tr>
-
-<tr>
-<td>
-<div class="label">JBB/JBKB</div>
-<div class="value">589911/VIII/SRUT-598/DJPD-SPD/02/2026</div>
-</td>
-
-<td>
-<div class="label">JENIS ANGKUTAN</div>
-<div class="value">07 - 02 - 2026</div>
-</td>
-</tr>
-
-<tr>
-<td>
-<div class="label">JBI/JBKI</div>
-<div class="value">589911/VIII/SRUT-598/DJPD-SPD/02/2026</div>
-</td>
-
-<td>
-<div class="label">BAHAN BAKAR</div>
-<div class="value">07 - 02 - 2026</div>
-</td>
-</tr>
-
-<tr>
-<td>
-<div class="label">SUDUT PERGI</div>
-<div class="value">589911/VIII/SRUT-598/DJPD-SPD/02/2026</div>
-</td>
-
-<td>
-<div class="label">PINTU KELUAR DARURAT</div>
-<div class="value">07 - 02 - 2026</div>
-</td>
-</tr>
-
-<tr>
-<td>
-<div class="label">VARIAN</div>
-<div class="value">589911/VIII/SRUT-598/DJPD-SPD/02/2026</div>
-</td>
-
-<td>
-<div class="label">KETERANGAN BAK/TANGKI</div>
-<div class="value">07 - 02 - 2026</div>
-</td>
-</tr>
-
-<table class="table">
-
-<div class="section-title">
-3. BENTUK FISIK KENDARAAN :
-</div>
-
-<div class="line"></div>
-
-<div class="gallery">
-
-<div class="item">
-<img src="depan.jpg">
-<div class="caption">TAMPAK DEPAN</div>
-</div>
-
-<div class="item">
-<img src="samping.jpg">
-<div class="caption">TAMPAK SAMPING</div>
-</div>
-
-<div class="item">
-<img src="belakang.jpg">
-<div class="caption">TAMPAK BELAKANG</div>
-</div>
-
-</div>
-
-<style>
-
 .section-title{
 color:#3a6ea5;
 font-size:26px;
@@ -469,11 +129,25 @@ font-weight:bold;
 margin-top:40px;
 }
 
-.line{
-height:1px;
-background:#dcdcdc;
-margin:10px 0 25px 0;
+/* BUTTON */
+
+.lampiran-btn{
+display:inline-block;
+background:#28a745;
+color:white;
+padding:10px 18px;
+border-radius:4px;
+font-size:14px;
+font-weight:600;
+text-decoration:none;
+cursor:pointer;
 }
+
+.lampiran-btn:hover{
+background:#218838;
+}
+
+/* GALLERY */
 
 .gallery{
 display:flex;
@@ -489,209 +163,14 @@ text-align:center;
 
 .item img{
 width:100%;
-border-radius:3px;
 }
 
 .caption{
 margin-top:10px;
 color:#2c8aa0;
-font-size:16px;
 }
 
-</style>
-
-<table class="table">
-
-<div class="section-title">4. KETERANGAN :</div>
-<table class="table2">
-
-<tr>
-<td>
-<div class="label">UKURAN BAN PADA SUMBU 1</div>
-<div class="value">589911/VIII/SRUT-598/DJPD-SPD/02/2026</div>
-</td>
-
-<td>
-<div class="label">UKURAN BAN PADA SUMBU 2</div>
-<div class="value">07 - 02 - 2026</div>
-</td>
-</tr>
-
-<tr>
-<td>
-<div class="label">UKURAN BAN PADA SUMBU 3</div>
-<div class="value">589911/VIII/SRUT-598/DJPD-SPD/02/2026</div>
-</td>
-
-<td>
-<div class="label">UKURAN BAN PADA SUMBU 4</div>
-<div class="value">07 - 02 - 2026</div>
-</td>
-</tr>
-
-<tr>
-<td>
-<div class="label">KEKUATAN RANCANGAN SUMBU 1</div>
-<div class="value">589911/VIII/SRUT-598/DJPD-SPD/02/2026</div>
-</td>
-
-<td>
-<div class="label">KEKUATAN RANCANGAN SUMBU 2</div>
-<div class="value">07 - 02 - 2026</div>
-</td>
-</tr>
-
-<tr>
-<td>
-<div class="label">KEKUATAN RANCANGAN SUMBU 3</div>
-<div class="value">589911/VIII/SRUT-598/DJPD-SPD/02/2026</div>
-</td>
-
-<td>
-<div class="label">KEKUATAN RANCANGAN SUMBU 4</div>
-<div class="value">07 - 02 - 2026</div>
-</td>
-</tr>
-
-<tr>
-<td>
-<div class="label">KONFIGURASI SUMBU</div>
-<div class="value">589911/VIII/SRUT-598/DJPD-SPD/02/2026</div>
-</td>
-
-<td>
-<div class="label">KELAS JALAN</div>
-<div class="value">07 - 02 - 2026</div>
-</td>
-</tr>
-
-<tr>
-<td>
-<div class="label">LEBAR PINTU SUPIR</div>
-<div class="value">589911/VIII/SRUT-598/DJPD-SPD/02/2026</div>
-</td>
-
-<td>
-<div class="label">JARAK BANGKU</div>
-<div class="value">07 - 02 - 2026</div>
-</td>
-</tr>
-
-<tr>
-<td>
-<div class="label">BERAT KOSONG</div>
-<div class="value">589911/VIII/SRUT-598/DJPD-SPD/02/2026</div>
-</td>
-
-<td>
-<div class="label">DAYA ANGKUT BARANG (KG)</div>
-<div class="value">07 - 02 - 2026</div>
-</td>
-</tr>
-
-<tr>
-<td>
-<div class="label">DAYA ANGKUT PENUMPANG</div>
-<div class="value">589911/VIII/SRUT-598/DJPD-SPD/02/2026</div>
-</td>
-
-<td>
-<div class="label"></div>
-<div class="value"></div>
-</td>
-</tr>
-
-</style>
-
-<table class="table">
-
-<div class="section-title">5. CEKLIST KESESUAIAN DATA FISIK KENDARAAN DENGAN SK RANCANG BANGUN :</div>
-<table class="table2">
-
-<tr>
-<td>
-<div class="label">A. KESESUAIAN LANDASAN</div>
-<div class="value">589911/VIII/SRUT-598/DJPD-SPD/02/2026</div>
-</td>
-
-<td>
-<div class="label">G. KESESUAIAN KONDISI BAK MUATAN</div>
-<div class="value">07 - 02 - 2026</div>
-</td>
-</tr>
-
-<tr>
-<td>
-<div class="label">B.KESESUAIAN BENTUK FISIK KENDARAAN</div>
-<div class="value">589911/VIII/SRUT-598/DJPD-SPD/02/2026</div>
-</td>
-
-<td>
-<div class="label">H. KESESUAIAN VOLUME BAK MUATAN</div>
-<div class="value">07 - 02 - 2026</div>
-</td>
-</tr>
-
-<tr>
-<td>
-<div class="label">C. KESESUAIAN DIMENSI KENDARAAN</div>
-<div class="value">589911/VIII/SRUT-598/DJPD-SPD/02/2026</div>
-</td>
-
-<td>
-<div class="label">I. KESESUSAIAN DIMENSI DAN JUMLAH TEMPAT DUDUK</div>
-<div class="value">07 - 02 - 2026</div>
-</td>
-</tr>
-
-<tr>
-<td>
-<div class="label">D. KESESUAIAN MATERIAL </div>
-<div class="value">589911/VIII/SRUT-598/DJPD-SPD/02/2026</div>
-</td>
-
-<td>
-<div class="label">J. KESESUAIAN JARAK TEMPAT DUDUK</div>
-<div class="value">07 - 02 - 2026</div>
-</td>
-</tr>
-
-<tr>
-<td>
-<div class="label">E. KESESUAIAN POSISI LAMPU-LAMPU</div>
-<div class="value">589911/VIII/SRUT-598/DJPD-SPD/02/2026</div>
-</td>
-
-<td>
-<div class="label">K. KESESUAIAN FASILITAS TEMPAT KELUAR DARURAT</div>
-<div class="value">07 - 02 - 2026</div>
-</td>
-</tr>
-
-<tr>
-<td>
-<div class="label">F. KESESUAIAN UKURAN BAN</div>
-<div class="value">589911/VIII/SRUT-598/DJPD-SPD/02/2026</div>
-</td>
-
-<td>
-<div class="label"></div>
-<div class="value"></div>
-</td>
-</tr>
-
-
-</table>
-
-<div class="home-container">
-
-<a href="index.html" class="home-btn">
-🏠 Home
-</a>
-
-</div>
-
-<style>
+/* HOME */
 
 .home-container{
 text-align:center;
@@ -706,42 +185,13 @@ padding:14px 28px;
 font-size:20px;
 border-radius:8px;
 text-decoration:none;
-font-weight:500;
 }
 
 .home-btn:hover{
 background:#1596a5;
 }
 
-</style>
-
-<div class="footer">
-
-<div class="footer-container">
-
-<div class="footer-box">
-<h3>ALAMAT</h3>
-<p>
-Jl. Contoh Alamat No.123<br>
-Jakarta<br>
-Indonesia
-</p>
-</div>
-
-<div class="footer-box">
-<h3>TENTANG KAMI</h3>
-<p>
-Sistem Informasi Sertifikasi Registrasi Uji Tipe
-digunakan untuk menampilkan data kendaraan
-yang telah terdaftar dalam sistem.
-</p>
-</div>
-
-</div>
-
-</div>
-
-<style>
+/* FOOTER */
 
 .footer{
 background:#1aa7b8;
@@ -762,64 +212,172 @@ flex-wrap:wrap;
 width:45%;
 }
 
-.footer-box h3{
-margin-bottom:10px;
-font-size:20px;
-}
+/* POPUP */
 
-.footer-box p{
-font-size:14px;
-line-height:1.6;
-}
-
-@media(max-width:768px){
-
-.footer-box{
+.popup-bg{
+display:none;
+position:fixed;
+top:0;
+left:0;
 width:100%;
-margin-bottom:20px;
+height:100%;
+background:rgba(0,0,0,0.5);
+z-index:9999;
 }
 
+.popup-box{
+background:white;
+width:85%;
+max-width:900px;
+margin:60px auto;
+border-radius:6px;
+overflow:hidden;
+}
+
+.popup-header{
+background:#f5f5f5;
+padding:12px 15px;
+font-weight:bold;
+display:flex;
+justify-content:space-between;
+}
+
+.popup-box iframe{
+width:100%;
+height:650px;
+border:none;
+}
+
+.close-btn{
+cursor:pointer;
+font-size:18px;
 }
 
 </style>
 
+</head>
 
+<body>
 
+<!-- HEADER -->
 
+<div class="top-header">
 
+<div class="logo-area">
 
+<img src="logo.png" class="logo">
 
+<div>
+<div class="title-main">SISTEM INFORMASI</div>
+<div class="title-sub">SERTIFIKASI REGISTRASI UJI TIPE</div>
+</div>
 
+</div>
 
+</div>
 
+<div class="top-line"></div>
 
+<div class="srut-header">
+<h1>DATA SRUT</h1>
+<div class="divider"><span></span></div>
+</div>
 
+<div class="section-line"></div>
 
+<div class="container">
 
+<div class="section-title">DATA KENDARAAN :</div>
 
+<table class="table2">
 
+<tr>
+<td>
+<div class="label">NO. SRUT</div>
+<div class="value">589911/VIII/SRUT-598/DJPD-SPD/02/2026</div>
+</td>
 
+<td>
+<div class="label">LAMPIRAN</div>
+<a class="lampiran-btn" onclick="bukaLampiran()">LIHAT LAMPIRAN KENDARAAN</a>
+</td>
+</tr>
 
+</table>
 
+<div class="section-title">3. BENTUK FISIK KENDARAAN :</div>
 
+<div class="gallery">
 
+<div class="item">
+<img src="depan.jpg">
+<div class="caption">TAMPAK DEPAN</div>
+</div>
 
+<div class="item">
+<img src="samping.jpg">
+<div class="caption">TAMPAK SAMPING</div>
+</div>
 
+<div class="item">
+<img src="belakang.jpg">
+<div class="caption">TAMPAK BELAKANG</div>
+</div>
 
+</div>
 
+</div>
 
+<div class="home-container">
+<a href="index.html" class="home-btn">🏠 Home</a>
+</div>
 
+<div class="footer">
 
+<div class="footer-container">
 
+<div class="footer-box">
+<h3>ALAMAT</h3>
+<p>Jl. Medan Merdeka Barat No 8. Jakarta Pusat</p>
+</div>
 
+<div class="footer-box">
+<h3>TENTANG KAMI</h3>
+<p>Sistem Informasi Sertifikasi Registrasi Uji Tipe Kendaraan Bermotor.</p>
+</div>
 
+</div>
 
+</div>
 
+<!-- POPUP -->
 
+<div id="popupLampiran" class="popup-bg">
 
+<div class="popup-box">
 
+<div class="popup-header">
+LAMPIRAN DOKUMEN KENDARAAN
+<span onclick="tutupLampiran()" class="close-btn">✕</span>
+</div>
 
+<iframe src="lampiran.pdf"></iframe>
 
+</div>
 
+</div>
 
+<script>
 
+function bukaLampiran(){
+document.getElementById("popupLampiran").style.display="block";
+}
+
+function tutupLampiran(){
+document.getElementById("popupLampiran").style.display="none";
+}
+
+</script>
+
+</body>
+</html>
