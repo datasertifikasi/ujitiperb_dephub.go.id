@@ -213,10 +213,68 @@ margin:30px 0;
 </td>
 
 <td>
-<div class="label">LAMPIRAN</div>
-<a class="lampiran-btn" href="lampiran.pdf">
-LIHAT LAMPIRAN KENDARAAN</a>
+<a class="lampiran-btn" onclick="openLampiran()">
+LIHAT LAMPIRAN KENDARAAN
+</a>
 
+<div id="lampiranModal" class="modal">
+
+<div class="modal-content">
+
+<div class="modal-header">
+LAMPIRAN DOKUMEN KENDARAAN
+<span class="close" onclick="closeLampiran()">×</span>
+</div>
+
+<iframe src="lampiran.pdf" width="100%" height="600px"></iframe>
+
+</div>
+
+</div>
+
+.modal{
+display:none;
+position:fixed;
+z-index:999;
+left:0;
+top:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.5);
+}
+
+.modal-content{
+background:white;
+width:80%;
+max-width:900px;
+margin:80px auto;
+padding:20px;
+border-radius:6px;
+}
+
+.modal-header{
+font-size:18px;
+font-weight:bold;
+margin-bottom:10px;
+display:flex;
+justify-content:space-between;
+}
+
+.close{
+cursor:pointer;
+font-size:22px;
+}
+<script>
+
+function openLampiran(){
+document.getElementById("lampiranModal").style.display="block";
+}
+
+function closeLampiran(){
+document.getElementById("lampiranModal").style.display="none";
+}
+
+</script>
 <style>
 
 .lampiran-btn{
@@ -777,6 +835,7 @@ margin-bottom:20px;
 }
 
 </style>
+
 
 
 
