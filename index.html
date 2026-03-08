@@ -221,8 +221,9 @@ padding-right:70px;
 
 <td>
 <div class="label">LAMPIRAN</div>
-<a class="lampiran-btn" href="lampiran.pdf" target="_blank">
-LIHAT LAMPIRAN KENDARAAN</a>
+<a class="lampiran-btn" onclick="bukaLampiran()">
+LIHAT LAMPIRAN KENDARAAN
+</a>
 
 <style>
 
@@ -782,6 +783,33 @@ margin-bottom:20px;
 }
 
 </style>
+<div id="popupLampiran" class="popup-bg">
+
+<div class="popup-box">
+
+<div class="popup-header">
+LAMPIRAN DOKUMEN KENDARAAN
+<span onclick="tutupLampiran()" class="close-btn">✕</span>
+</div>
+
+<iframe src="lampiran.pdf"></iframe>
+
+</div>
+
+</div>
+
+<script>
+
+function bukaLampiran(){
+document.getElementById("popupLampiran").style.display="block";
+}
+
+function tutupLampiran(){
+document.getElementById("popupLampiran").style.display="none";
+}
+
+</script>
+
 
 
 
